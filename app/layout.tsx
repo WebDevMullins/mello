@@ -15,8 +15,8 @@ export const metadata: Metadata = {
 	description: 'Like Trello',
 	icons: [
 		{
-			url: '/logo.svg',
-			href: '/logo.svg'
+			url: '/logo.png',
+			href: '/logo.png'
 		}
 	]
 }
