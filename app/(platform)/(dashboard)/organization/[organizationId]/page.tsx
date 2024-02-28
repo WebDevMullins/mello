@@ -1,4 +1,10 @@
+import Form from './form'
+
 const OrganizationIdPage = () => {
-	return <div>Oganization page</div>
+	return (
+		<div>
+			<Form />
+		</div>
+	)
 }
 export default OrganizationIdPage
