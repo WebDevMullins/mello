@@ -5,7 +5,7 @@ import { Button } from '@/components/ui/button'
 interface FormSubmitProps {
 	children: React.ReactNode
 	disabled?: boolean
-	classname?: string
+	className?: string
 	variant?:
 		| 'default'
 		| 'destructive'
@@ -18,7 +18,7 @@ interface FormSubmitProps {
 const FormSubmit = ({
 	children,
 	disabled,
-	classname,
+	className,
 	variant
 }: FormSubmitProps) => {
 	const { pending } = useFormStatus()
@@ -26,7 +26,7 @@ const FormSubmit = ({
 	return (
 		<Button
 			disabled={disabled || pending}
-			className={classname}
+			className={className}
 			variant={variant}
 			type='submit'>
 			{children}
