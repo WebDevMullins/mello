@@ -12,9 +12,10 @@ import {
 } from '@/components/ui/popover'
 import { useAction } from '@/hooks/use-action'
 
-import FormInput from './form-input'
-import FormSubmit from './form-submit'
 import { toast } from 'sonner'
+import FormInput from './form-input'
+import FormPicker from './form-picker'
+import FormSubmit from './form-submit'
 
 interface FormPopoverProps {
 	children: React.ReactNode
@@ -40,12 +41,13 @@ const FormPopover = ({
 
 	const onSubmit = (formData: FormData) => {
 		const title = formData.get('title') as string
+		const image = formData.get('image') as string
 
 		execute({ title })
 	}
 	return (
 		<Popover>
-			<PopoverTrigger>{children}</PopoverTrigger>
+			<PopoverTrigger asChild>{children}</PopoverTrigger>
 			<PopoverContent
 				align={align}
 				className='w-80 pt-3'
@@ -65,6 +67,10 @@ const FormPopover = ({
 					action={onSubmit}
 					className='space-y-4'>
 					<div className='space-y-4'>
+						<FormPicker
+							id='image'
+							errors={fieldErrors}
+						/>
 						<FormInput
 							id='title'
 							label='Board title'
