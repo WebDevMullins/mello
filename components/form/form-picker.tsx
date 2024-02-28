@@ -22,7 +22,7 @@ const FormPicker = ({ id, errors }: FormPickerProps) => {
 	const [images, setImages] =
 		useState<Array<Record<string, any>>>(defaultImages)
 	const [isLoading, setIsLoading] = useState(true)
-	const [selectedImage, setSelectedImage] = useState<string | null>(null)
+	const [selectedImage, setSelectedImage] = useState(null)
 
 	useEffect(() => {
 		const fetchImages = async () => {
