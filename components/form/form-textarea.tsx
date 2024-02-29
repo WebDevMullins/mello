@@ -1,13 +1,13 @@
 'use client'
 
+import { cn } from '@/lib/utils'
 import { KeyboardEventHandler, forwardRef } from 'react'
 import { useFormStatus } from 'react-dom'
 
 import { Label } from '@/components/ui/label'
 import { Textarea } from '@/components/ui/textarea'
-import { cn } from '@/lib/utils'
 
-// import { FormErrors } from './form-errors'
+import FormErrors from './form-errors'
 
 interface FormTextareaProps {
 	id: string
@@ -70,10 +70,12 @@ export const FormTextarea = forwardRef<HTMLTextAreaElement, FormTextareaProps>(
 						defaultValue={defaultValue}
 					/>
 				</div>
-				{/* <FormErrors
-					id={id}
-					errors={errors}
-				/> */}
+				<div className='h-[34px]'>
+					<FormErrors
+						id={id}
+						errors={errors}
+					/>
+				</div>
 			</div>
 		)
 	}
