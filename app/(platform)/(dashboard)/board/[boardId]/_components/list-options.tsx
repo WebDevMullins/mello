@@ -14,6 +14,7 @@ import { toast } from 'sonner'
 import { deleteList } from '@/actions/delete-list'
 import { useAction } from '@/hooks/use-action'
 
+import { copyList } from '@/actions/copy-list'
 import FormSubmit from '@/components/form/form-submit'
 import { Button } from '@/components/ui/button'
 import {
@@ -42,11 +43,28 @@ export const ListOptions = ({ data, onAddCard }: ListOptionsProps) => {
 		}
 	})
 
+	const { execute: executeCopy } = useAction(copyList, {
+		onSuccess(data) {
+			toast.success(`List "${data.title}" copied`)
+			closeRef.current?.click()
+		},
+		onError(error) {
+			toast.error(error)
+		}
+	})
+
 	const onDelete = (formData: FormData) => {
 		const id = formData.get('id') as string
 		const boardId = formData.get('boardId') as string
 
 		executeDelete({ id, boardId })
+	}
+
+	const onCopy = (formData: FormData) => {
+		const id = formData.get('id') as string
+		const boardId = formData.get('boardId') as string
+
+		executeCopy({ id, boardId })
 	}
 
 	return (
@@ -84,7 +102,7 @@ export const ListOptions = ({ data, onAddCard }: ListOptionsProps) => {
 					/>
 					Add Card
 				</Button>
-				<form action=''>
+				<form action={onCopy}>
 					<input
 						hidden
 						readOnly
