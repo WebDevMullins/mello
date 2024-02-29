@@ -15,7 +15,7 @@ interface FormSubmitProps {
 		| 'link'
 }
 
-const FormSubmit = ({
+export const FormSubmit = ({
 	children,
 	disabled,
 	className,
@@ -33,4 +33,3 @@ const FormSubmit = ({
 		</Button>
 	)
 }
-export default FormSubmit

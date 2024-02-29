@@ -15,7 +15,7 @@ import { deleteList } from '@/actions/delete-list'
 import { useAction } from '@/hooks/use-action'
 
 import { copyList } from '@/actions/copy-list'
-import FormSubmit from '@/components/form/form-submit'
+import { FormSubmit } from '@/components/form/form-submit'
 import { Button } from '@/components/ui/button'
 import {
 	Popover,

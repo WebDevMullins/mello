@@ -10,7 +10,7 @@ import { createList } from '@/actions/create-list'
 import { useAction } from '@/hooks/use-action'
 
 import FormInput from '@/components/form/form-input'
-import FormSubmit from '@/components/form/form-submit'
+import { FormSubmit } from '@/components/form/form-submit'
 import { Button } from '@/components/ui/button'
 
 import { ListWrapper } from './list-wrapper'
