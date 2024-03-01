@@ -2,8 +2,13 @@
 
 import { DragDropContext, Droppable } from '@hello-pangea/dnd'
 import { useEffect, useState } from 'react'
+import { toast } from 'sonner'
 
 import { ListWithCards } from '@/types'
+
+import { updateCardOrder } from '@/actions/update-card-order'
+import { updateListOrder } from '@/actions/update-list-order'
+import { useAction } from '@/hooks/use-action'
 
 import { ListForm } from './list-form'
 import { ListItem } from './list-item'
@@ -22,6 +27,24 @@ function reorder<T>(list: T[], startIndex: number, endIndex: number): T[] {
 
 export const ListContainer = ({ boardId, data }: ListContainerProps) => {
 	const [orderedData, setOrderedData] = useState(data)
+
+	const { execute: executeUpdateListOrder } = useAction(updateListOrder, {
+		onSuccess: () => {
+			toast.success('List order updated')
+		},
+		onError: (error) => {
+			toast.error(error)
+		}
+	})
+
+	const { execute: executeUpdateCardOrder } = useAction(updateCardOrder, {
+		onSuccess: () => {
+			toast.success('Card order updated')
+		},
+		onError: (error) => {
+			toast.error(error)
+		}
+	})
 
 	useEffect(() => {
 		setOrderedData(data)
@@ -50,7 +73,11 @@ export const ListContainer = ({ boardId, data }: ListContainerProps) => {
 				}
 			)
 			setOrderedData(items)
-			// TODO: update the order in the database
+
+			executeUpdateListOrder({
+				boardId,
+				items
+			})
 		}
 
 		// if card is moved
@@ -92,7 +119,11 @@ export const ListContainer = ({ boardId, data }: ListContainerProps) => {
 				sourceList.cards = reorderedCards
 
 				setOrderedData(newOrderedData)
-				// TODO: update the order in the database
+
+				executeUpdateCardOrder({
+					items: reorderedCards,
+					boardId
+				})
 
 				// move card to another list
 			} else {
@@ -116,7 +147,11 @@ export const ListContainer = ({ boardId, data }: ListContainerProps) => {
 				})
 
 				setOrderedData(newOrderedData)
-				// TODO: update the order in the database
+
+				executeUpdateCardOrder({
+					items: destinationList.cards,
+					boardId
+				})
 			}
 		}
 	}
