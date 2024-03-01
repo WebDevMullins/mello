@@ -10,11 +10,13 @@ export const UpdateCard = z.object({
 			})
 			.min(3, 'Description must be at least 3 characters')
 	),
-	title: z
-		.string({
-			required_error: 'Title is required',
-			invalid_type_error: 'Title is required'
-		})
-		.min(3, 'Title must be at least 3 characters'),
+	title: optional(
+		z
+			.string({
+				required_error: 'Title is required',
+				invalid_type_error: 'Title is required'
+			})
+			.min(3, 'Title must be at least 3 characters')
+	),
 	id: z.string()
 })
