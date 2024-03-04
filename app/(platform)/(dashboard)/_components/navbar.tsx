@@ -22,35 +22,42 @@ const Navbar = () => {
 					sideOffset={18}>
 					<Button
 						size='sm'
-						className='rouded-sm hidden h-auto px-2 py-1.5 md:block'>
-						Create
+						className='hidden h-auto px-2 py-1.5 md:flex'>
+						<PlusIcon
+							size={16}
+							className='mr-2'
+						/>
+						Create Board
 					</Button>
 				</FormPopover>
 				<FormPopover>
 					<Button
-						size='sm'
-						className='block rounded-sm md:hidden'>
-						<PlusIcon className='h-4 w-4' />
+						size='icon'
+						variant='outline'
+						className='md:hidden'>
+						<PlusIcon size={16} />
 					</Button>
 				</FormPopover>
 			</div>
 			<div className='items-cetner ml-auto flex gap-x-2'>
 				<ThemeToggle />
-				<OrganizationSwitcher
-					hidePersonal
-					afterCreateOrganizationUrl='/organization/:id'
-					afterLeaveOrganizationUrl='/select-org'
-					afterSelectOrganizationUrl='/organization/:id'
-					appearance={{
-						elements: {
-							rootBox: {
-								display: 'flex',
-								alignItems: 'center',
-								justifyContent: 'center'
+				<div className='hidden md:flex'>
+					<OrganizationSwitcher
+						hidePersonal
+						afterCreateOrganizationUrl='/organization/:id'
+						afterLeaveOrganizationUrl='/select-org'
+						afterSelectOrganizationUrl='/organization/:id'
+						appearance={{
+							elements: {
+								rootBox: {
+									display: 'flex',
+									alignItems: 'center',
+									justifyContent: 'center'
+								}
 							}
-						}
-					}}
-				/>
+						}}
+					/>
+				</div>
 				<UserButton
 					afterSignOutUrl='/'
 					appearance={{
