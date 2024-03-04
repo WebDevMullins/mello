@@ -8,6 +8,7 @@ import { redirect } from 'next/navigation'
 import { createAuditLog } from '@/lib/create-audit-log'
 import { createSafeAction } from '@/lib/create-safe-action'
 import { db } from '@/lib/db'
+import { decrementAvailableCount } from '@/lib/org-limit'
 
 import { DeleteBoard } from './schema'
 import { InputType, ReturnType } from './types'
@@ -31,6 +32,9 @@ const handler = async (data: InputType): Promise<ReturnType> => {
 				orgId
 			}
 		})
+
+		await decrementAvailableCount()
+
 		await createAuditLog({
 			entityTitle: board.title,
 			entityId: board.id,
