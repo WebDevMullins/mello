@@ -65,12 +65,12 @@ export const Actions = ({ data }: ActionsProps) => {
 	}
 
 	return (
-		<div className='mt-2 space-y-2'>
+		<div className='mt-2 flex flex-col space-y-2'>
 			<p className='text-xs font-semibold'>Actions</p>
 			<Button
 				onClick={onCopy}
 				disabled={isLoadingCopy}
-				className='w-full justify-start'
+				className='w-[6rem] justify-start md:w-full'
 				size='inline'>
 				<Copy className='mr-2 h-4 w-4' />
 				Copy
@@ -79,7 +79,7 @@ export const Actions = ({ data }: ActionsProps) => {
 				onClick={onDelete}
 				disabled={isLoadingDelete}
 				variant='destructive'
-				className='w-full justify-start'
+				className='w-[6rem] justify-start md:w-full'
 				size='inline'>
 				<Trash2 className='mr-2 h-4 w-4' />
 				Delete
