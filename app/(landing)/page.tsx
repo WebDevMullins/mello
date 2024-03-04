@@ -5,7 +5,7 @@ import { Button } from '@/components/ui/button'
 
 const LandingPage = () => {
 	return (
-		<main className='flex min-h-screen flex-col items-center p-24'>
+		<main className='flex flex-col items-center'>
 			<div className='flex flex-col items-center justify-center'>
 				<h1 className='mb-6 text-center text-3xl md:text-6xl'>
 					Mello helps teams move
@@ -14,7 +14,7 @@ const LandingPage = () => {
 					work forward.
 				</div>
 			</div>
-			<div className='mx-auto mt-4 max-w-xs text-center text-sm text-primary/60 md:max-w-2xl md:text-xl'>
+			<div className='mx-auto mt-4 max-w-sm text-center text-sm text-primary/60 md:max-w-2xl md:text-xl'>
 				Collaborate, manage projects, and reach new productivity peaks. From
 				high rises to the home office, the way your team works is unique -
 				accomplish it all with Mello.
