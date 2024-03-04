@@ -26,13 +26,15 @@ interface FormPopoverProps {
 	side?: 'left' | 'right' | 'top' | 'bottom'
 	align?: 'start' | 'center' | 'end'
 	sideOffset?: number
+	alignOffset?: number
 }
 
 const FormPopover = ({
 	children,
 	side = 'bottom',
 	align,
-	sideOffset = 0
+	sideOffset = 0,
+	alignOffset = 0
 }: FormPopoverProps) => {
 	const proModal = useProModal()
 	const router = useRouter()
@@ -58,16 +60,15 @@ const FormPopover = ({
 		execute({ title, image })
 	}
 	return (
-		<Popover>
+		<Popover modal>
 			<PopoverTrigger asChild>{children}</PopoverTrigger>
 			<PopoverContent
 				align={align}
+				alignOffset={alignOffset}
 				className='w-80 pt-3'
 				side={side}
 				sideOffset={sideOffset}>
-				<div className='pb-4 text-center text-sm font-medium'>
-					Create board
-				</div>
+				<div className='pb-4 text-center text-sm font-medium'>Create board</div>
 				<PopoverClose
 					ref={closeRef}
 					asChild>

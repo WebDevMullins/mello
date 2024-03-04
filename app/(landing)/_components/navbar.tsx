@@ -1,7 +1,6 @@
 import Link from 'next/link'
 
 import { Logo } from '@/components/logo'
-import { ThemeToggle } from '@/components/theme-toggle'
 import { Button } from '@/components/ui/button'
 
 export const Navbar = () => {
@@ -10,7 +9,6 @@ export const Navbar = () => {
 			<div className='mx-auto flex w-full items-center justify-between md:max-w-screen-2xl'>
 				<Logo />
 				<div className='flex w-full items-center justify-between space-x-4 md:block md:w-auto'>
-					{/* <ThemeToggle /> */}
 					<Button
 						size='sm'
 						variant='outline'

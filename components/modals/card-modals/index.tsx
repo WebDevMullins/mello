@@ -10,9 +10,9 @@ import { CardWithList } from '@/types'
 import { Dialog, DialogContent } from '@/components/ui/dialog'
 
 import { Actions } from './actions'
+import { Activity } from './activity'
 import { Description } from './description'
 import { Header } from './header'
-import { Activity } from './activity'
 
 export const CardModal = () => {
 	const id = useCardModal((state) => state.id)

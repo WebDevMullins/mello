@@ -53,8 +53,10 @@ const BoardList = async () => {
 					</Link>
 				))}
 				<FormPopover
-					side='right'
-					sideOffset={10}>
+					side='bottom'
+					sideOffset={-290}
+					align='center'
+					alignOffset={0}>
 					<div
 						role='button'
 						className='relative flex aspect-video h-full w-full flex-col items-center justify-center gap-y-1 rounded-sm bg-muted transition hover:opacity-75'>

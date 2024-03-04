@@ -5,7 +5,7 @@ import { Button } from '@/components/ui/button'
 
 const LandingPage = () => {
 	return (
-		<main className='flex min-h-screen flex-col items-center p-24'>
+		<section className='flex flex-col items-center px-4'>
 			<div className='flex flex-col items-center justify-center'>
 				<h1 className='mb-6 text-center text-3xl md:text-6xl'>
 					Mello helps teams move
@@ -25,7 +25,7 @@ const LandingPage = () => {
 				variant='default'>
 				<Link href='/sign-up'>Get Mello for free</Link>
 			</Button>
-		</main>
+		</section>
 	)
 }
 

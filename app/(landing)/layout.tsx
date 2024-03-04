@@ -3,9 +3,9 @@ import { Navbar } from './_components/navbar'
 
 const LandingLayout = ({ children }: { children: React.ReactNode }) => {
 	return (
-		<div className='h-full'>
+		<div className='flex h-full justify-center'>
 			<Navbar />
-			<main className='pb-20 pt-40'>{children}</main>
+			<main className='my-auto'>{children}</main>
 			<Footer />
 		</div>
 	)

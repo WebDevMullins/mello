@@ -44,13 +44,13 @@ export const BoardOptions = ({ id }: BoardOptionsProps) => {
 				className='px-0 py-3'
 				side='bottom'
 				align='start'>
-				<div className='pb-4 text-center text-sm font-medium text-neutral-600'>
+				<div className='pb-4 text-center text-sm font-medium'>
 					Board Actions
 				</div>
 				<PopoverClose asChild>
 					<Button
 						variant='ghost'
-						className='absolute right-2 top-2 h-auto w-auto p-2 text-neutral-600'>
+						className='absolute right-2 top-2 h-auto w-auto p-2'>
 						<XIcon size={16} />
 					</Button>
 				</PopoverClose>
