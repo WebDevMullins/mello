@@ -58,7 +58,7 @@ export const BoardOptions = ({ id }: BoardOptionsProps) => {
 					variant='ghost'
 					onClick={onDelete}
 					disabled={isLoading}
-					className='h-auto w-full justify-start rounded-none p-2 px-5 text-sm font-normal text-rose-500 hover:bg-rose-500/90'>
+					className='h-auto w-full justify-start rounded-none p-2 px-5 text-sm font-normal text-destructive hover:bg-destructive/90'>
 					<Trash2Icon
 						size={16}
 						className='mr-2'

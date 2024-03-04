@@ -2,7 +2,7 @@ import { OrganizationProfile } from '@clerk/nextjs'
 
 const SettingsPage = () => {
 	return (
-		<div className='w-full'>
+		<div className='w-full md:w-fit'>
 			<OrganizationProfile
 				appearance={{
 					elements: {
@@ -11,7 +11,7 @@ const SettingsPage = () => {
 							width: '100%'
 						},
 						card: {
-							border: '1px solid #e5e5e5',
+							border: '1px solid',
 							boxShadow: 'none',
 							width: '100%'
 						}

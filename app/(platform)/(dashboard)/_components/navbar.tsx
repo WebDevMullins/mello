@@ -3,13 +3,14 @@ import { PlusIcon } from 'lucide-react'
 
 import FormPopover from '@/components/form/form-popover'
 import { Logo } from '@/components/logo'
+import { ThemeToggle } from '@/components/theme-toggle'
 import { Button } from '@/components/ui/button'
 
 import MobileSidebar from './mobile-sidebar'
 
 const Navbar = () => {
 	return (
-		<nav className='fixed top-0 z-50 flex h-14 w-full items-center border-b bg-white px-4 shadow-sm'>
+		<nav className='fixed top-0 z-50 flex h-14 w-full items-center border-b bg-background px-4 shadow-sm'>
 			<MobileSidebar />
 			<div className='flex items-center gap-x-4'>
 				<div className='hidden md:flex'>
@@ -34,6 +35,7 @@ const Navbar = () => {
 				</FormPopover>
 			</div>
 			<div className='items-cetner ml-auto flex gap-x-2'>
+				<ThemeToggle />
 				<OrganizationSwitcher
 					hidePersonal
 					afterCreateOrganizationUrl='/organization/:id'

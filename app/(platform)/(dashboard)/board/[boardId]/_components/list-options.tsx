@@ -80,14 +80,12 @@ export const ListOptions = ({ data, onAddCard }: ListOptionsProps) => {
 				className='px-0 py-3'
 				side='bottom'
 				align='start'>
-				<div className='pb-4 text-center text-sm font-medium text-neutral-600'>
-					List Actions
-				</div>
+				<div className='pb-4 text-center text-sm font-medium'>List Actions</div>
 				<PopoverClose
 					ref={closeRef}
 					asChild>
 					<Button
-						className='absolute right-2 top-2 h-auto w-auto p-2 text-neutral-600'
+						className='absolute right-2 top-2 h-auto w-auto p-2'
 						variant='ghost'>
 						<XIcon size={16} />
 					</Button>
@@ -144,7 +142,7 @@ export const ListOptions = ({ data, onAddCard }: ListOptionsProps) => {
 						value={data.boardId}
 					/>
 					<FormSubmit
-						className='h-auto w-full justify-start rounded-none p-2 px-5 text-sm font-normal text-rose-500 hover:bg-rose-500/90'
+						className='h-auto w-full justify-start rounded-none p-2 px-5 text-sm font-normal text-destructive hover:bg-destructive/90'
 						variant='ghost'>
 						<Trash2Icon
 							size={16}

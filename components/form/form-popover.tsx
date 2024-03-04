@@ -65,14 +65,14 @@ const FormPopover = ({
 				className='w-80 pt-3'
 				side={side}
 				sideOffset={sideOffset}>
-				<div className='pb-4 text-center text-sm font-medium text-neutral-600'>
+				<div className='pb-4 text-center text-sm font-medium'>
 					Create board
 				</div>
 				<PopoverClose
 					ref={closeRef}
 					asChild>
 					<Button
-						className='absolute right-2 top-2 h-auto w-auto p-2 text-neutral-600'
+						className='absolute right-2 top-2 h-auto w-auto p-2'
 						variant='ghost'>
 						<XIcon size={16} />
 					</Button>
