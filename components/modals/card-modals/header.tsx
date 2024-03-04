@@ -63,10 +63,7 @@ export const Header = ({ data }: HeaderProps) => {
 
 	return (
 		<div className='mb-6 flex w-full items-start gap-x-3'>
-			<LayoutIcon
-				size={24}
-				className='text-neutral-700'
-			/>
+			<LayoutIcon size={24} />
 			<div className='w-full'>
 				<form action={onSubmit}>
 					<FormInput
@@ -74,11 +71,12 @@ export const Header = ({ data }: HeaderProps) => {
 						onBlur={onBlur}
 						id='title'
 						defaultValue={title}
-						className='relative -left-1.5 mb-0.5 w-[95%] truncate border-transparent bg-transparent px-1 text-xl font-semibold text-neutral-700 focus-visible:border-input focus-visible:bg-white'
+						className='relative -left-1.5 mb-0.5 w-[95%] truncate border-transparent bg-transparent px-1 text-xl font-semibold focus-visible:border-input focus-visible:bg-primary'
 					/>
 				</form>
 				<p className='text-sm text-muted-foreground'>
-					in list <span className='underline'>{data.list.title}</span>
+					in list{' '}
+					<span className='capitalize underline'>{data.list.title}</span>
 				</p>
 			</div>
 		</div>
@@ -88,10 +86,10 @@ export const Header = ({ data }: HeaderProps) => {
 Header.Skeleton = function HeaderSkeleton() {
 	return (
 		<div className='mb-6 flex w-full items-start gap-x-3'>
-			<Skeleton className='mt-1 h-6 w-6 bg-neutral-200' />
+			<Skeleton className='mt-1 h-6 w-6 bg-primary-foreground' />
 			<div>
-				<Skeleton className='mb-1 h-6 w-24 bg-neutral-200' />
-				<Skeleton className='h-4 w-12 bg-neutral-200' />
+				<Skeleton className='mb-1 h-6 w-24 bg-primary-foreground' />
+				<Skeleton className='h-4 w-12 bg-primary-foreground' />
 			</div>
 		</div>
 	)

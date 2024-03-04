@@ -81,10 +81,10 @@ export const Description = ({ data }: DescriptionProps) => {
 		<div className='flex w-full items-start gap-x-3'>
 			<AlignLeftIcon
 				size={20}
-				className='mt-0.5 text-neutral-700'
+				className='mt-0.5'
 			/>
 			<div className='w-full'>
-				<p className='mb-2 font-semibold text-neutral-700'>Description</p>
+				<p className='mb-2 font-semibold'>Description</p>
 				{isEditing ? (
 					<form
 						action={onSubmit}
@@ -113,7 +113,7 @@ export const Description = ({ data }: DescriptionProps) => {
 					<div
 						role='button'
 						onClick={enableEditing}
-						className='min-h-[78px] rounded-md bg-neutral-200 px-3.5 py-3 text-sm font-medium'>
+						className='min-h-[78px] rounded-md bg-primary-foreground px-3.5 py-3 text-sm font-medium'>
 						{data.description || 'Add a description...'}
 					</div>
 				)}
@@ -125,10 +125,10 @@ export const Description = ({ data }: DescriptionProps) => {
 Description.Skeleton = function DescriptionSkeleton() {
 	return (
 		<div className='flex w-full items-start gap-x-3'>
-			<Skeleton className='h-6 w-6 bg-neutral-200' />
+			<Skeleton className='h-6 w-6 bg-primary-foreground' />
 			<div className='w-full'>
-				<Skeleton className='mb-2 h-6 w-24 bg-neutral-200' />
-				<Skeleton className='h-[78px] w-full bg-neutral-200' />
+				<Skeleton className='mb-2 h-6 w-24 bg-primary-foreground' />
+				<Skeleton className='h-[78px] w-full bg-primary-foreground' />
 			</div>
 		</div>
 	)

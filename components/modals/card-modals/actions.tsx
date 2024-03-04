@@ -70,7 +70,6 @@ export const Actions = ({ data }: ActionsProps) => {
 			<Button
 				onClick={onCopy}
 				disabled={isLoadingCopy}
-				variant='gray'
 				className='w-full justify-start'
 				size='inline'>
 				<Copy className='mr-2 h-4 w-4' />
@@ -79,7 +78,7 @@ export const Actions = ({ data }: ActionsProps) => {
 			<Button
 				onClick={onDelete}
 				disabled={isLoadingDelete}
-				variant='gray'
+				variant='destructive'
 				className='w-full justify-start'
 				size='inline'>
 				<Trash2 className='mr-2 h-4 w-4' />
@@ -92,9 +91,9 @@ export const Actions = ({ data }: ActionsProps) => {
 Actions.Skeleton = function ActionsSkeleton() {
 	return (
 		<div className='mt-2 space-y-2'>
-			<Skeleton className='h-4 w-20 bg-neutral-200' />
-			<Skeleton className='h-8 w-full bg-neutral-200' />
-			<Skeleton className='h-8 w-full bg-neutral-200' />
+			<Skeleton className='h-4 w-20 bg-primary-foreground' />
+			<Skeleton className='h-8 w-full bg-primary-foreground' />
+			<Skeleton className='h-8 w-full bg-primary-foreground' />
 		</div>
 	)
 }

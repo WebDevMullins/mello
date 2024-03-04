@@ -34,7 +34,7 @@ const BoardList = async () => {
 
 	return (
 		<div className='space-y-4'>
-			<div className='flex items-center text-lg font-semibold text-neutral-700'>
+			<div className='flex items-center text-lg font-semibold'>
 				<User2Icon
 					size={24}
 					className='mr-2'
@@ -46,7 +46,7 @@ const BoardList = async () => {
 					<Link
 						key={board.id}
 						href={`/board/${board.id}`}
-						className='group relative aspect-video h-full w-full overflow-hidden rounded-sm bg-sky-700 bg-cover bg-center bg-no-repeat p-2'
+						className='group relative aspect-video h-full w-full overflow-hidden rounded-sm bg-cover bg-center bg-no-repeat p-2'
 						style={{ backgroundImage: `url(${board.imageThumbUrl})` }}>
 						<div className='absolute inset-0 bg-black/30 transition group-hover:bg-black/40' />
 						<p className='relative font-semibold text-white'>{board.title}</p>
@@ -67,7 +67,7 @@ const BoardList = async () => {
 						<Hint
 							sideOffset={40}
 							description={`
-					Free Workspaces can have up to 3 open boards. For unlimited boards upgrade this workspace.
+					Free Workspaces can have up to 1 open board. For unlimited boards upgrade this workspace.
 					`}>
 							<HelpCircleIcon className='absolute bottom-2 right-2 h-[14px] w-[14px]' />
 						</Hint>

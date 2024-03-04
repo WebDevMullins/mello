@@ -11,7 +11,7 @@ const SettingsPage = () => {
 							width: '100%'
 						},
 						card: {
-							border: '1px solid #e5e5e5',
+							border: '1px solid',
 							boxShadow: 'none',
 							width: '100%'
 						}

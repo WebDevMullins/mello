@@ -11,7 +11,7 @@ export const Logo = () => {
 					height={30}
 					width={30}
 				/>
-				<p className='text-xl text-neutral-700'>Mello</p>
+				<p className='text-xl text-primary'>Mello</p>
 			</div>
 		</Link>
 	)

@@ -39,17 +39,13 @@ export const ProModal = () => {
 						className='object-cover'
 					/>
 				</div>
-				<div className='mx-auto space-y-6 p-6 text-neutral-700'>
+				<div className='mx-auto space-y-6 p-6'>
 					<h2 className='text-xl font-semibold'>Upgrade to Mello Pro today!</h2>
-					<p className='text-xs font-semibold text-neutral-600'>
-						Explore the best of Mello
-					</p>
+					{/* <p className='text-xs font-semibold'>Explore the best of Mello</p> */}
 					<div className='pl-3'>
 						<ul className='list-disc text-sm'>
 							<li>Unlimited Boards</li>
-							<li>Advanced Checklists</li>
-							<li>Admin and Security Features</li>
-							<li>And more!</li>
+							<li>Advanced Checklists (Coming Soon!)</li>
 						</ul>
 					</div>
 					<Button
